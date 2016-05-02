@@ -46,3 +46,6 @@ mergedata <- cbind(subject_merge, mergedata)
 ## Create new data set of average of each variable for each activity and each subject
 summarydata <- mergedata %>% group_by(Subject, Activity) %>% 
         summarize_each(funs(mean))
+
+## Export tidy data set
+write.table(summarydata, "./Summary Data.txt", row.names = FALSE)
