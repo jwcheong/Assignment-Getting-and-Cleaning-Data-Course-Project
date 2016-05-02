@@ -5,25 +5,42 @@ date: "3 May 2016"
 output: html_document
 ---
 
-## Background
+## Subjects
+A total of 30 subjects were observed for this project, numbered 1 through 30
 
-This project uses data collected from the accelerometers from the Samsung Galaxy S smartphone, which measured 30 subjects performing 6 different activities. A full description of the research is available at the site where the data was obtained:
+## Activities
+The subjects were recorded performing 6 different activities, namely Walking, Walking Upstairs, Walking Downstairs, Sitting, Standing, and Laying
 
-http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
 
-Below is the url to download the data for the project:
+## Measurements
+The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. These time domain signals (prefix 't' to denote time) were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal was then separated into body and gravity acceleration signals (tBodyAcc-XYZ and tGravityAcc-XYZ) using another low pass Butterworth filter with a corner frequency of 0.3 Hz. 
 
-https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
+Subsequently, the body linear acceleration and angular velocity were derived in time to obtain Jerk signals (tBodyAccJerk-XYZ and tBodyGyroJerk-XYZ). Also the magnitude of these three-dimensional signals were calculated using the Euclidean norm (tBodyAccMag, tGravityAccMag, tBodyAccJerkMag, tBodyGyroMag, tBodyGyroJerkMag). 
 
-## Description of run_analysis.R
+Finally a Fast Fourier Transform (FFT) was applied to some of these signals producing fBodyAcc-XYZ, fBodyAccJerk-XYZ, fBodyGyro-XYZ, fBodyAccJerkMag, fBodyGyroMag, fBodyGyroJerkMag. (Note the 'f' to indicate frequency domain signals). 
 
-"run_analysis.R"" performs the following functions in order: 
+These signals were used to estimate variables of the feature vector for each pattern:  
+'-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
 
-1. Download and extracts data files onto local directory
-2. Import relevant data sets into R
-3. Merges the "test" and "train" data sets into a single working data set
-4. Extract only the mean and standard deviation of the various measurements
-5. Identify the subject and activity for each observation
-6. Create a new data set of the average of each variable for each subject and activity
+tBodyAcc-XYZ
+tGravityAcc-XYZ
+tBodyAccJerk-XYZ
+tBodyGyro-XYZ
+tBodyGyroJerk-XYZ
+tBodyAccMag
+tGravityAccMag
+tBodyAccJerkMag
+tBodyGyroMag
+tBodyGyroJerkMag
+fBodyAcc-XYZ
+fBodyAccJerk-XYZ
+fBodyGyro-XYZ
+fBodyAccMag
+fBodyAccJerkMag
+fBodyGyroMag
+fBodyGyroJerkMag
 
-The script creates a tidy data set titled "summarydata" from the raw data (step 6 above), which can then be exported for further analysis
+The set of variables that were estimated from these signals are: 
+
+mean(): Mean value
+std(): Standard deviation
