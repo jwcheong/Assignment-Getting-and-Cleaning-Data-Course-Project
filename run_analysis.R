@@ -27,7 +27,7 @@ colnames(mergedata) <- features$V2
 
 
 ## Extract only the measurements on the mean and standard deviation
-mergedata <- mergedata[ , grepl("mean|std", features)]
+mergedata <- mergedata[ , grepl("mean|std", features$V2)]
 
 
 ## Use descriptive activity names to name the activities in the data set
