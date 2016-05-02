@@ -21,4 +21,4 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
 5. Identify the subject and activity for each observation
 6. Create a new data set of the average of each variable for each subject and activity
 
-The script creates a tidy data set titled "summarydata" from the raw data (step 6 above), which can then be exported for further analysis
+The script exports a tidy data set "Summary Data.txt" from the raw data (step 6 above), which can then be used for further analysis
